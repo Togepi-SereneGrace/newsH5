@@ -11,6 +11,7 @@
     "lint": "eslint --fix \"./src/**/*.{ts,js,vue}\""
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
     "@types/w3c-image-capture": "^1.0.10",
     "axios": "^1.6.7",
     "element-plus": "^2.5.3",

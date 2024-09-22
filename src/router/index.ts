@@ -11,6 +11,11 @@ const router = createRouter({
       component: IndexView,
     },
     {
+      path: "/newsList",
+      name: "newsList",
+      component: IndexView,
+    },
+    {
       path: "/article",
       name: "articleDetail",
       component: ArticleDetail,

@@ -12,7 +12,7 @@
       <div class="news-content">
         <img :src="article.image" alt="" class="news-image" />
         <p class="news-description">{{ article.description }}</p>
-        <el-button type="primary" @click="goToArticle(article.url)">阅读更多</el-button>
+        <el-button type="primary" @click="goToArticle(article.router)">阅读更多</el-button>
       </div>
     </el-card>
   </div>
@@ -23,8 +23,10 @@ import { ref, onMounted } from 'vue';
 import { ElCard, ElButton } from 'element-plus';
 import { getNewsList } from '@/service/news';
 import { newsList } from '@/service/mockData';
+import { useRoute, useRouter } from 'vue-router'
 
 const newsArticles = ref([]);
+const router = useRouter();
 
 const fetchNews = () => {
   // 使用 mock 数据
@@ -32,7 +34,8 @@ const fetchNews = () => {
 };
 
 const goToArticle = (url) => {
-  window.open(url, '_blank');
+  // window.open(url, '_blank');
+  router.push(url)
 };
 
 onMounted(fetchNews);

@@ -1,4 +1,11 @@
 <template>
+  <el-icon style="z-index: 3000;position: fixed;width: 25px;height: 25px;margin: 13px 0 0 10px"
+    @click="back"
+  >
+    <ArrowLeftBold style="width: 30px;height: 30px;"/>
+  </el-icon>
+  <h1 class="app-title">详情</h1>
+  <div style="height: 50px;width: 100%;"></div>
   <div style="padding: 10px; font-size: 22px; font-weight: bold;">{{ article.title }}</div>
   <div style="display: flex;padding: 10px;gap: 10px;">
     <div>{{ article.publishName }}</div>
@@ -6,13 +13,7 @@
   </div>
   <div class="content">{{ article.content }}</div>
   <div class="article-detail">
-    <!-- <el-card class="article-card">
-      <p class="date">{{ article.date }}</p>
-      
-    </el-card> -->
-
     <el-divider></el-divider>
-
     <div style="padding-left: 10px; font-size: 20px;margin-bottom: 10px;">评论</div>
     <el-input
       v-model="newComment"
@@ -53,6 +54,9 @@ export default {
         this.$message.warning('评论不能为空！');
       }
     },
+    back() {
+      this.$router.push('newsList')
+    }
   },
 };
 </script>
@@ -75,6 +79,7 @@ export default {
 }
 .content {
   padding: 10px;
+  min-height: 50vh;
 }
 
 .app-title {
