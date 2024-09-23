@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import IndexView from "../views/Index.vue";
 import ArticleDetail from "@/views/article/ArticleDetail.vue";
+import NewsListPage from "@/views/newsList/NewsListPage.vue";
+import HomeIndex from "@/views/HomeIndex.vue";
+import UpSpace from "@/views/UpSpace.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,7 +16,17 @@ const router = createRouter({
     {
       path: "/newsList",
       name: "newsList",
-      component: IndexView,
+      component: NewsListPage,
+    },
+    {
+      path: "/homeIndex",
+      name: "homeIndex",
+      component: HomeIndex,
+    },
+    {
+      path: "/upSpaceIndex",
+      name: "upSpaceIndex",
+      component: UpSpace,
     },
     {
       path: "/article",
