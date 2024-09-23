@@ -1,15 +1,20 @@
 <template>
-  <!-- <div class="index-page">这是页面</div> -->
+  <el-icon style="z-index: 3000;position: fixed;width: 25px;height: 25px;margin: 13px 0 0 10px"
+    @click="back"
+  >
+    <ArrowLeftBold style="width: 30px;height: 30px;"/>
+  </el-icon>
   <h1 class="app-title">咨询</h1>
   <div style="height: 40px;width: 100%;"></div>
   <NewsList />
 </template>
 
 <script setup>
+import NewsList from './NewsList.vue'
 import { useRouter } from 'vue-router'
 const router = useRouter();
 
-const gotoPage = () => {
+const back = () => {
   router.push('/upSpaceIndex')
 };
 </script>

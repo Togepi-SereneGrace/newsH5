@@ -11,7 +11,7 @@ const router = createRouter({
     {
       path: "/",
       name: "indexPage",
-      component: IndexView,
+      component: NewsListPage,
     },
     {
       path: "/newsList",
