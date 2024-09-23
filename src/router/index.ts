@@ -6,7 +6,7 @@ import HomeIndex from "@/views/HomeIndex.vue";
 import UpSpace from "@/views/UpSpace.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.VITE_BASE_URL || import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
