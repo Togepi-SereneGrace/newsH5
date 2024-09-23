@@ -1,5 +1,5 @@
 {
-  "name": "hlmlstudyproject",
+  "name": "newdemo",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,13 +8,15 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
-    "lint": "eslint --fix \"./src/**/*.{ts,js,vue}\""
+    "lint": "eslint --fix \"./src/**/*.{ts,js,vue}\"",
+    "deploy": "gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@types/w3c-image-capture": "^1.0.10",
     "axios": "^1.6.7",
     "element-plus": "^2.5.3",
+    "gh-pages": "^6.1.1",
     "image-capture": "^0.4.0",
     "tsparticles-slim": "^2.12.0",
     "typescript-cookie": "^1.0.6",
