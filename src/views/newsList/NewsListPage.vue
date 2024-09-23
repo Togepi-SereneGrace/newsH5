@@ -6,7 +6,12 @@
 </template>
 
 <script setup>
-import NewsList from './NewsList.vue';
+import { useRouter } from 'vue-router'
+const router = useRouter();
+
+const gotoPage = () => {
+  router.push('/upSpaceIndex')
+};
 </script>
 
 <style scoped>

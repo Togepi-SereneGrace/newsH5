@@ -1,4 +1,9 @@
 <template>
+    <el-icon style="z-index: 3000;position: fixed;width: 25px;height: 25px;margin: 13px 0 0 10px"
+    @click="back"
+  >
+    <ArrowLeftBold style="width: 30px;height: 30px;"/>
+  </el-icon>
   <div class="upSpaceIndex ">
     <div class="commonText" style="font-size: 30px; margin-bottom: 30px"> 2024 </div>
     <div class="commonText" style="font-size: 70px; margin-bottom: 0px"> UP </div>
@@ -18,7 +23,7 @@
 import { useRouter } from 'vue-router'
 const router = useRouter();
 
-const gotoPage = () => {
+const back = () => {
   router.push('/homeIndex')
 };
 </script>
