@@ -1,0 +1,11 @@
+/* 全局变量 */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+}
+
+/* 首页的部分参数配置 */
+:root {
+  --header-height: 60px;
+  --sidebar-width: 200px;
+}
